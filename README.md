@@ -30,25 +30,19 @@ pip install -e .
 
 ```python
 from pyvoynich.bitrans import Bitrans
-from pyvoynich.data import STA_Eva_Bint, Eva_Cuva
+from pyvoynich.data import STA_Eva_def, STA_Eva_Bint, Eva_Cuva, Curr_Eva_def
 
-# Create a Bitrans instance with default rules
-bitrans = Bitrans()
-    
-# Test a simple translation
-input_text = "P2A3K1A2C2.A2Q1A3B2.A3C1.A3Q2A3G1.L1A1B2.L1A1C1A2.U2C1J1C2.A2.Q1A1C1.L1A1B2B1A2"
-output_text = bitrans.translate(input_text)
-print(f"Input: {input_text}")
-print(f"Output with default rules: {output_text}")
+input_text = "tchor. ckhoiin. daiin. cphchar-"
 
-# Test with different rule sets
-bitrans_bint = Bitrans(STA_Eva_Bint)
-output_bint = bitrans_bint.translate(input_text)
-print(f"Output with STA_Eva_Bint rules: {output_bint}")
+bitrans1 = Bitrans(STA_Eva_def, direction=2)
+output1 = bitrans1.translate(input_text)
+print(f"Output: {output1}")
 
-bitrans_cuva = Bitrans(Eva_Cuva)
-output_cuva = bitrans_cuva.translate(input_text)
-print(f"Output with Eva_Cuva rules: {output_cuva}")
+
+input_text_sta = "Q2K1A1C1.U1A3G1.B1A3G1.T1K1A3C1"
+bitrans2 = Bitrans(STA_Eva_def, direction=1)
+output2 = bitrans2.translate(input_text_sta)
+print(f"Output: {output2}")
 ```
 
 ## Available Rule Sets
