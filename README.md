@@ -1,4 +1,4 @@
-# PyVoynich
+![pyvoynich logo](https://github.com/wjbmattingly/pyvoynich/blob/main/assets/pyvoynich-logo.png?raw=true)
 
 A Python package for bi-directional translation and substitution, particularly useful for working with Voynich manuscript transcriptions.
 
